@@ -77,7 +77,7 @@ the library from our
 
 ### Grid
 
-The jqx-grid tag helper allows you to easily append and display a Grid to your web page and data bound to your web server's data source.
+The ```jqx-grid``` tag helper allows you to easily append and display a Grid to your web page and data bound to your web server's data source.
 
 ```html
 <jqx-grid id="grid" serverProcessing="true" altrows="true" filterable="true" pageable="true" editable="true" autoheight="true" sourceId-for="@employee.ID" theme="@ViewData["Theme"]" sortable="true" width="850" sourceRoot="Employees" sourceTotalRecords="TotalRecords" edit="@Url.Action("Edit","TagHelpers")" sourceUrl="@Url.Action("GetPageData","TagHelpers")" sourceModel="employee">
@@ -92,7 +92,7 @@ The jqx-grid tag helper allows you to easily append and display a Grid to your w
 </jqx-grid>
 ```
 
-The Grid tag helper shares the same API members as the Javascript Grid widget i.e all properties, methods and events can be used. Additional properties for the jqx-grid tag helper are:
+The Grid tag helper shares the same API members as the Javascript Grid widget i.e all properties, methods and events can be used. Additional properties for the ```jqx-grid``` tag helper are:
 
 ```
 create - {{String}} which determines the URL called when a Grid row is added.
@@ -109,11 +109,14 @@ sourceUrl - {{String}} which determines the data source's URL.
 sourceModel - {{Model}} which determines the data source's Model.
 ```
 
-jqx-grid-columns tag helper should be defined within the jqx-grid tag helper and defines the Grid columns collection. jqx-grid-column tag helper should be defined within the jqx-grid-columns tag helper and defines a Grid column. jqx-grid-column-groups tag helper should be defined within the jqx-grid tag helper and defines the Grid columns hierarchy. jqx-grid-column-group tag helper should be defined within the jqx-grid-column-groups tag helper and defines a Grid column group.
+```jqx-grid-columns``` tag helper should be defined within the ```jqx-grid``` tag helper and defines the Grid columns collection.<br />
+```jqx-grid-column``` tag helper should be defined within the ```jqx-grid-columns``` tag helper and defines a Grid column.<br />
+```jqx-grid-column-groups``` tag helper should be defined within the ```jqx-grid``` tag helper and defines the Grid columns hierarchy.<br /> 
+```jqx-grid-column-group``` tag helper should be defined within the ```jqx-grid-column-groups``` tag helper and defines a Grid column group.<br />
 
 ### Bar Gauge
 
-The jqx-bargauge tag helper adds a Bar Gauge component to a web page.
+The ```jqx-bargauge``` tag helper adds a Bar Gauge component to a web page.
 
 ```html
 @{
@@ -135,7 +138,7 @@ The jqx-bargauge tag helper adds a Bar Gauge component to a web page.
 
 ### Bullet Chart
 
-The jqx-bulletchart tag helper adds a Bullet Chart component to a web page.
+The ```jqx-bulletchart``` tag helper adds a Bullet Chart component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -183,8 +186,8 @@ The jqx-bulletchart tag helper adds a Bullet Chart component to a web page.
 
 ### Button
 
-The jqx-button tag helper adds a Button component to a web page.
-jqx-repeatbutton add a Repeat Button and jqx-togglebutton adds a toggle button
+The ```jqx-button``` tag helper adds a Button component to a web page.
+```jqx-repeatbutton``` add a Repeat Button and ```jqx-togglebutton``` adds a toggle button
 to the web page.
 
 ```html
@@ -199,7 +202,7 @@ to the web page.
 
 ### Button Group
 
-The jqx-buttongroup tag helper adds a Button Group Chart component to a web page.
+The ```jqx-buttongroup``` tag helper adds a Button Group Chart component to a web page.
 
 ```html
 @{
@@ -246,7 +249,7 @@ CheckBox Mode<br/>
 
 ### Calendar
 
-The jqx-calendar tag helper adds a Calendar component to a web page.
+The ```jqx-calendar``` tag helper adds a Calendar component to a web page.
 
 ```html
 @{
@@ -258,7 +261,7 @@ The jqx-calendar tag helper adds a Calendar component to a web page.
 
 ### Chart
 
-The jqx-chart tag helper adds a Chart component to a web page.
+The ```jqx-chart``` tag helper adds a Chart component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers;
@@ -283,20 +286,19 @@ The jqx-chart tag helper adds a Chart component to a web page.
 </jqx-chart>
 ```
 
-jqx-chart-series-groups tag helper should be defined within the jqx-chart tag helper and
-defines the Chart series groups collection. jqx-chart-serie-group tag helper should be
-defined within the jqx-chart-series-groups tag helper and defines a Chart serie group.
-jqx-chart-series tag helper should be defined within the jqx-chart-serie-group tag helper
-and defines the Chart series collection. jqx-chart-serie tag helper should be defined within
-the jqx-chart-series tag helper and defines a Chart serie. The for and radiusFor members
-can be used for model binding. jqx-chart-x-axis tag helper should be defined within the
-jqx-chart tag helper and defines the Chart's X Axis. The for member can be used for model
-binding. jqx-chart-value-axis tag helper should be defined within the jqx-chart tag helper
-and defines the Chart's Value Axis. jqx-chart-title tag helper should be defined within the
-jqx-chart-value-axis tag helper and defines the Chart's Title. jqx-chart-labels tag helper
-should be defined within the jqx-chart-value-axis tag helper and defines the Chart's Labels.
-jqx-chart-range-selector tag helper should be defined within the jqx-chart tag helper and
-defines the Chart's Range selector.
+```jqx-chart-series-groups``` tag helper should be defined within the ```jqx-chart``` tag helper and
+defines the Chart series groups collection. ```jqx-chart-serie-group``` tag helper should be
+defined within the ```jqx-chart-series-groups``` tag helper and defines a Chart serie group.<br />
+```jqx-chart-series``` tag helper should be defined within the ```jqx-chart-serie-group``` tag helper
+and defines the Chart series collection. <br />
+```jqx-chart-serie``` tag helper should be defined within the ```jqx-chart-series``` tag helper and defines a Chart serie. <br />
+The ```for``` and ```radiusFor``` members can be used for model binding. <br />
+```jqx-chart-x-axis``` tag helper should be defined within the ```jqx-chart``` tag helper and defines the Chart's X Axis. 
+The for member can be used for model binding. <br />
+```jqx-chart-value-axis``` tag helper should be defined within the ```jqx-chart``` tag helper and defines the Chart's Value Axis. <br />
+```jqx-chart-title``` tag helper should be defined within the ```jqx-chart-value-axis``` tag helper and defines the Chart's Title. <br />
+```jqx-chart-labels``` tag helper should be defined within the ```jqx-chart-value-axis``` tag helper and defines the Chart's Labels.<br />
+```jqx-chart-range-selector``` tag helper should be defined within the ```jqx-chart``` tag helper and defines the Chart's Range selector.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.ChartSalesDataItem>
@@ -329,7 +331,7 @@ defines the Chart's Range selector.
 
 ### CheckBox
 
-The jqx-checkbox tag helper adds a CheckBox component to a web page.
+The ```jqx-checkbox``` tag helper adds a CheckBox component to a web page.
 
 ```html
 @{
@@ -348,7 +350,7 @@ The jqx-checkbox tag helper adds a CheckBox component to a web page.
 
 ### Color Picker
 
-The jqx-colorpicker tag helper adds a Color Picker component to a web page.
+The ```jqx-colorpicker``` tag helper adds a Color Picker component to a web page.
 
 ```html
 @{
@@ -360,7 +362,7 @@ The jqx-colorpicker tag helper adds a Color Picker component to a web page.
 
 ### Combo Box
 
-The jqx-combobox tag helper adds a ComboBox component to a web page.
+The ```jqx-combobox``` tag helper adds a ComboBox component to a web page.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.SalesEmployee>
@@ -427,7 +429,7 @@ sourceModel - {{Model}} which determines the data source's Model.
 
 ### Complex Input
 
-The jqx-complexinput tag helper adds a Complex Input component to a web page.
+The ```jqx-complexinput``` tag helper adds a Complex Input component to a web page.
 
 ```html
 @{
@@ -439,7 +441,9 @@ The jqx-complexinput tag helper adds a Complex Input component to a web page.
 
 ### DataTable
 
-The jqx-datatable tag helper adds a DataTable component to a web page. The DataTable tag helper shares the same API members as the Javascript DataTable widget i.e all properties, methods and events can be used. Additional properties for the jqx-datatable tag helper are:
+The ```jqx-datatable``` tag helper adds a DataTable component to a web page. 
+The DataTable tag helper shares the same API members as the Javascript DataTable widget i.e all properties, methods and events can be used. 
+Additional properties for the ```jqx-datatable``` tag helper are:
 
 ```
 create - {{String}} which determines the URL called when a DataTable row is added.
@@ -456,12 +460,10 @@ sourceUrl - {{String}} which determines the data source's URL.
 sourceModel - {{Model}} which determines the data source's Model.
 ```
 
-jqx-datatable-columns tag helper should be defined within the jqx-datatable tag helper and defines
-the DataTable columns collection. jqx-datatable-column tag helper should be defined within the
-jqx-datatable-columns tag helper and defines a DataTable column. jqx-datatable-column-groups tag
-helper should be defined within the jqx-datatable tag helper and defines the DataTable columns
-hierarchy. jqx-datatable-column-group tag helper should be defined within the jqx-datatable-column-groups
-tag helper and defines a DataTable column group.
+```jqx-datatable-columns``` tag helper should be defined within the ```jqx-datatable``` tag helper and defines the DataTable columns collection. <br />
+```jqx-datatable-column``` tag helper should be defined within the ```jqx-datatable-columns``` tag helper and defines a DataTable column. <br />
+```jqx-datatable-column-groups``` tag helper should be defined within the ```jqx-datatable``` tag helper and defines the DataTable columns hierarchy. <br />
+```jqx-datatable-column-group``` tag helper should be defined within the ```jqx-datatable-column-groups``` tag helper and defines a DataTable column group.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.Employee>
@@ -486,7 +488,7 @@ tag helper and defines a DataTable column group.
 
 ### DateTimeInput
 
-The jqx-datetimeinput tag helper adds a DateTimeInput component to a web page.
+The ```jqx-datetimeinput``` tag helper adds a DateTimeInput component to a web page.
 
 ```html
 @{
@@ -502,7 +504,7 @@ The jqx-datetimeinput tag helper adds a DateTimeInput component to a web page.
 
 ### Docking
 
-The jqx-docking tag helper adds a Bullet Chart component to a web page.
+The ```jqx-docking``` tag helper adds a Bullet Chart component to a web page.
 
 ```html
 @{
@@ -533,7 +535,10 @@ The jqx-docking tag helper adds a Bullet Chart component to a web page.
 </jqx-docking>
 ```
 
-jqx-docking-panel tag helper defines a docking panel. jqx-docking-window tag helper defines a docking window. jqx-docking-window-header tag helper defines a docking window's header. jqx-docking-window-body tag helper defines a docking window's body.
+```jqx-docking-panel``` tag helper defines a docking panel. <br />
+```jqx-docking-window``` tag helper defines a docking window. <br />
+```jqx-docking-window-header``` tag helper defines a docking window's header. <br />
+```jqx-docking-window-body``` tag helper defines a docking window's body.
 
 ### Docking Layout
 
@@ -753,8 +758,10 @@ The jqx-dockinglayout tag helper adds a Docking Layout component to a web page.
 
 ### DropDownList
 
+
+The ```jqx-dropdownlist``` tag helper adds a DropDownList component to a web page.
+
 ```
-The jqx-dropdownlist tag helper adds a DropDownList component to a web page.
 create - {{String}} which determines the URL called when a DropDownList item is added.
 for - {{ModelExpression}} used for model binding and determines the label member.
 value-for - {{ModelExpression}} used for model binding and determines the value member.
@@ -819,7 +826,7 @@ sourceModel - {{Model}} which determines the data source's Model.
 
 ### Editor
 
-The jqx-editor tag helper adds Editor component to a web page.
+The ```jqx-editor``` tag helper adds Editor component to a web page.
 
 ```html
 @{
@@ -831,7 +838,7 @@ The jqx-editor tag helper adds Editor component to a web page.
 
 ### Expander
 
-The jqx-expander tag helper adds Expander component to a web page.
+The ```jqx-expander``` tag helper adds Expander component to a web page.
 @{
     ViewData["Title"] = "ASP .NET MVC Expander Example";
 }
@@ -856,7 +863,7 @@ The jqx-fileupload tag helper adds a File Upload component to a web page.
 
 ### Formatted Input
 
-The jqx-formattedinput tag helper adds a Formatted Input component to a web page.
+The ```jqx-formattedinput``` tag helper adds a Formatted Input component to a web page.
 
 ```html
 @{
@@ -868,7 +875,7 @@ The jqx-formattedinput tag helper adds a Formatted Input component to a web page
 
 ### Gauge
 
-The jqx-gauge tag helper adds a Gauge component to a web page.
+The ```jqx-gauge``` tag helper adds a Gauge component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers;
@@ -890,7 +897,7 @@ The jqx-gauge tag helper adds a Gauge component to a web page.
 
 ### Input
 
-The jqx-input tag helper adds an Input component to a web page.
+The ```jqx-input``` tag helper adds an Input component to a web page.
 
 ```
 create - {{String}} which determines the URL called when a Input item is added.
@@ -929,7 +936,7 @@ sourceModel - {{Model}} which determines the data source's Model.
 
 ### Kanban
 
-The jqx-kanban tag helper adds a Kanban component to a web page.
+The ```jqx-kanban``` tag helper adds a Kanban component to a web page.
 
 ```html
 @model jQWidgets.AspNet.Core.Models.jQWidgetsDemosContext
@@ -961,7 +968,7 @@ The jqx-kanban tag helper adds a Kanban component to a web page.
 
 ### Knob
 
-The jqx-knob tag helper adds a Knob component to a web page.
+The ```jqx-knob``` tag helper adds a Knob component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers;
@@ -1004,7 +1011,7 @@ The jqx-knob tag helper adds a Knob component to a web page.
 
 ### Layout
 
-The jqx-layout tag helper adds a Layout component to a web page.
+The ```jqx-layout``` tag helper adds a Layout component to a web page.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.TreeItem>
@@ -1199,7 +1206,7 @@ The jqx-layout tag helper adds a Layout component to a web page.
 
 ### Linear Gauge
 
-The jqx-lineargauge tag helper adds a Linear Gauge component to a web page.
+The ```jqx-lineargauge``` tag helper adds a Linear Gauge component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers;
@@ -1245,7 +1252,7 @@ The jqx-linkbutton tag helper adds a Link Button component to a web page.
 
 ### List Box
 
-The jqx-listbox tag helper adds a List Box component to a web page.
+The ```jqx-listbox``` tag helper adds a List Box component to a web page.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.SalesEmployee>
@@ -1296,7 +1303,7 @@ The jqx-listbox tag helper adds a List Box component to a web page.
 
 ### List Menu
 
-The jqx-listmenu tag helper adds a List Menu component to a web page.
+The ```jqx-listmenu``` tag helper adds a List Menu component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1372,7 +1379,7 @@ The jqx-listmenu tag helper adds a List Menu component to a web page.
 
 ### Masked Input
 
-The jqx-maskedinput tag helper adds a Masked Input component to a web page.
+The ```jqx-maskedinput``` tag helper adds a Masked Input component to a web page.
 
 ```html
 @{
@@ -1403,7 +1410,7 @@ The jqx-maskedinput tag helper adds a Masked Input component to a web page.
 
 ### Menu
 
-The jqx-menu tag helper adds a Menu component to a web page.
+The ```jqx-menu``` tag helper adds a Menu component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1499,7 +1506,7 @@ The jqx-menu tag helper adds a Menu component to a web page.
 
 ### Navigation Bar
 
-The jqx-navigationbar tag helper adds a NavigationBar component to a web page.
+The ```jqx-navigationbar``` tag helper adds a NavigationBar component to a web page.
 
 ```html
 @{
@@ -1518,13 +1525,13 @@ The jqx-navigationbar tag helper adds a NavigationBar component to a web page.
     <jqx-navigationbar-panel>
         <jqx-navigationbar-panel-header>Header 3</jqx-navigationbar-panel-header>
         <jqx-navigationbar-panel-body><label style="padding: 15px;">Body 3</label></jqx-navigationbar-panel-body>
-    </jqx-navigationbar-panel>  
+    </jqx-navigationbar-panel>
 </jqx-navigationbar>
 ```
 
 ### Notification
 
-The jqx-notification tag helper adds a Notification component to a web page.
+The ```jqx-notification``` tag helper adds a Notification component to a web page.
 
 ```html
 @{
@@ -1546,7 +1553,7 @@ The jqx-notification tag helper adds a Notification component to a web page.
 
 ### Number Input
 
-The jqx-numberinput tag helper adds a Number Input component to a web page.
+The ```jqx-numberinput``` tag helper adds a Number Input component to a web page.
 
 ```html
 @{
@@ -1561,7 +1568,7 @@ The jqx-numberinput tag helper adds a Number Input component to a web page.
 
 ### Panel
 
-The jqx-panel tag helper adds a Panel component to a web page.
+The ```jqx-panel``` tag helper adds a Panel component to a web page.
 
 ```html
 @{
@@ -1600,7 +1607,7 @@ The jqx-panel tag helper adds a Panel component to a web page.
 
 ### Password Input
 
-The jqx-passwordinput tag helper adds a Password Input component to a web page.
+The ```jqx-passwordinput``` tag helper adds a Password Input component to a web page.
 
 ```html
 @{
@@ -1615,7 +1622,7 @@ The jqx-passwordinput tag helper adds a Password Input component to a web page.
 
 ### Popover
 
-The jqx-popover tag helper adds a popover components to a web page.
+The ```jqx-popover``` tag helper adds a popover components to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1644,7 +1651,7 @@ The jqx-popover tag helper adds a popover components to a web page.
 
 ### Progress Bar
 
-The jqx-progressbar tag helper adds a Progress Bar component to a web page.
+The ```jqx-progressbar``` tag helper adds a Progress Bar component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1657,7 +1664,7 @@ The jqx-progressbar tag helper adds a Progress Bar component to a web page.
 
 ### Radio Button
 
-The jqx-radiobutton tag helper adds a Radio Button component to a web page.
+The ```jqx-radiobutton``` tag helper adds a Radio Button component to a web page.
 
 ```html
 @model jQWidgetsDemosContext
@@ -1695,7 +1702,7 @@ The jqx-radiobutton tag helper adds a Radio Button component to a web page.
 
 ### Range Selector
 
-The jqx-rangeselector tag helper adds a Range Selector component to a web page.
+The ```jqx-rangeselector``` tag helper adds a Range Selector component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1719,7 +1726,7 @@ The jqx-rangeselector tag helper adds a Range Selector component to a web page.
 
 ### Rating
 
-The jqx-rating tag helper adds a Rating component to a web page.
+The ```jqx-rating``` tag helper adds a Rating component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1732,7 +1739,7 @@ The jqx-rating tag helper adds a Rating component to a web page.
 
 ### Ribbon
 
-The jqx-ribbon tag helper adds a Ribbon component to a web page.
+The ```jqx-ribbon``` tag helper adds a Ribbon component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1804,7 +1811,7 @@ The jqx-ribbon tag helper adds a Ribbon component to a web page.
 
 ### Scheduler
 
-The jqx-scheduler tag helper adds a Scheduler component to a web page.
+The ```jqx-scheduler``` tag helper adds a Scheduler component to a web page.
 
 ```
 create - {{String}} which determines the URL called when a Scheduler appointment is added.
@@ -1817,12 +1824,15 @@ sourceRoot - {{String}} which determines the data source's Root member.
 sourceTotalRecords - {{Integer}} which determines the data source's TotalRecords member.
 sourceUrl - {{String}} which determines the data source's URL.
 sourceModel - {{Model}} which determines the data source's Model.
-jqx-scheduler-views tag helper defines the Scheduler's views collection. jqx-scheduler-view tag helper defines a Scheduler view. jqx-scheduler-time-ruler tag helper defines the Scheduler's time ruler.
 ```
+
+```jqx-scheduler-views``` tag helper defines the Scheduler's views collection. <br />
+```jqx-scheduler-view``` tag helper defines a Scheduler view. <br />
+```jqx-scheduler-time-ruler``` tag helper defines the Scheduler's time ruler.
 
 ### ScrollBar
 
-The jqx-scrollbar tag helper adds a ScrollBar component to a web page.
+The ```jqx-scrollbar``` tag helper adds a ScrollBar component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1850,7 +1860,7 @@ The jqx-scrollbar tag helper adds a ScrollBar component to a web page.
 
 ### ScrollView
 
-The jqx-scrollview tag helper adds a ScrollView component to a web page.
+The ```jqx-scrollview``` tag helper adds a ScrollView component to a web page.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.SalesEmployee>
@@ -1878,7 +1888,7 @@ The jqx-scrollview tag helper adds a ScrollView component to a web page.
 
 ### Slider
 
-The jqx-slider tag helper adds a Bullet Chart component to a web page.
+The ```jqx-slider``` tag helper adds a Bullet Chart component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1891,7 +1901,7 @@ The jqx-slider tag helper adds a Bullet Chart component to a web page.
 
 ### Splitter
 
-The jqx-splitter tag helper adds a Bullet Chart component to a web page.
+The ```jqx-splitter``` tag helper adds a Bullet Chart component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1930,12 +1940,14 @@ The jqx-splitter tag helper adds a Bullet Chart component to a web page.
         </jqx-tree>
     </jqx-splitter-panel>
 </jqx-splitter>
-jqx-splitter-panel tag helper defines a splitter panel. The Splitter component should have exactly two such tag helpers within the main jqx-splitter tag helper.
 ```
+
+```jqx-splitter-panel``` tag helper defines a splitter panel. 
+The Splitter component should have exactly two such tag helpers within the main ```jqx-splitter``` tag helper.
 
 ### Switch Button
 
-The jqx-switchbutton tag helper adds a Switch Button component to a web page.
+The ```jqx-switchbutton``` tag helper adds a Switch Button component to a web page.
 
 ```html
 @{
@@ -1947,7 +1959,10 @@ The jqx-switchbutton tag helper adds a Switch Button component to a web page.
 
 ### Tabs
 
-The jqx-tabs tag helper adds a Tabs component to a web page. jqx-tab-panel tag helper defines a Tab's panel. jqx-tab-panel-header tag helper defines a panel's header. jqx-tab-panel-body tag helper defines a panel's body.
+The ```jqx-tabs``` tag helper adds a Tabs component to a web page. <br />
+```jqx-tab-panel``` tag helper defines a Tab's panel. <br />
+```jqx-tab-panel-header``` tag helper defines a panel's header. <br />
+```jqx-tab-panel-body``` tag helper defines a panel's body.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -2019,7 +2034,7 @@ The jqx-tabs tag helper adds a Tabs component to a web page. jqx-tab-panel tag h
 
 ### TextArea
 
-The jqx-textarea tag helper adds a Text Area component to a web page.
+The ```jqx-textarea``` tag helper adds a Text Area component to a web page.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.SalesEmployee>
@@ -2042,7 +2057,7 @@ The jqx-textarea tag helper adds a Text Area component to a web page.
 
 ### Toolbar
 
-The jqx-toolbar tag helper adds a Toolbar component to a web page.
+The ```jqx-toolbar``` tag helper adds a Toolbar component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -2113,7 +2128,7 @@ The jqx-toolbar tag helper adds a Toolbar component to a web page.
 
 ### Tooltip
 
-The jqx-tooltip tag helper adds a Tooltip component to a web page.
+The ```jqx-tooltip``` tag helper adds a Tooltip component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -2134,7 +2149,7 @@ The jqx-tooltip tag helper adds a Tooltip component to a web page.
 
 ### Tree
 
-The jqx-tree tag helper adds a Tree component to a web page.
+The ```jqx-tree``` tag helper adds a Tree component to a web page.
 
 ```
 @model IEnumerable<jQWidgets.AspNet.Core.Models.TreeItem>
@@ -2148,7 +2163,8 @@ The jqx-tree tag helper adds a Tree component to a web page.
 
 ### TreeGrid
 
-The TreeGrid tag helper shares the same API members as the Javascript DataTable widget i.e all properties, methods and events can be used. Additional properties for the jqx-datatable tag helper are:
+The TreeGrid tag helper shares the same API members as the Javascript DataTable widget i.e all properties, methods and events can be used. 
+Additional properties for the ```jqx-datatable``` tag helper are:
 
 ```
 create - {{String}} which determines the URL called when a TreeGrid row is added.
@@ -2165,7 +2181,10 @@ sourceUrl - {{String}} which determines the data source's URL.
 sourceModel - {{Model}} which determines the data source's Model.
 ```
 
-jqx-treegrid-columns tag helper should be defined within the jqx-treegrid tag helper and defines the TreeGrid columns collection. jqx-treegrid-column tag helper should be defined within the jqx-treegrid-columns tag helper and defines a TreeGrid column. jqx-treegrid-column-groups tag helper should be defined within the jqx-treegrid tag helper and defines the TreeGrid columns hierarchy. jqx-treegrid-column-group tag helper should be defined within the jqx-treegrid-column-groups tag helper and defines a TreeGrid column group.
+```jqx-treegrid-columns``` tag helper should be defined within the ```jqx-treegrid``` tag helper and defines the TreeGrid columns collection. <br />
+```jqx-treegrid-column``` tag helper should be defined within the ```jqx-treegrid-columns``` tag helper and defines a TreeGrid column. <br />
+```jqx-treegrid-column-groups``` tag helper should be defined within the ```jqx-treegrid``` tag helper and defines the TreeGrid columns hierarchy. <br />
+```jqx-treegrid-column-group``` tag helper should be defined within the ```jqx-treegrid-column-groups``` tag helper and defines a TreeGrid column group.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.Employee>
@@ -2187,7 +2206,7 @@ jqx-treegrid-columns tag helper should be defined within the jqx-treegrid tag he
     }
 </script>
 <label>ASP .NET Core MVC Tree Grid Example</label><br/><br/>
-<jqx-treegrid keyDataField-for="@(employee.EmployeeID)" ready="treeGridReady()" sourceId-for="@(employee.EmployeeID)" instance="getInstance()" parentDataField-for="@(employee.ManagerID)" theme="@ViewData["Theme"]" sortable="true" width="850" source="Model"> 
+<jqx-treegrid keyDataField-for="@(employee.EmployeeID)" ready="treeGridReady()" sourceId-for="@(employee.EmployeeID)" instance="getInstance()" parentDataField-for="@(employee.ManagerID)" theme="@ViewData["Theme"]" sortable="true" width="850" source="Model">
     <jqx-treegrid-columns>
         <jqx-treegrid-column dataField-for="@(employee.FirstName)" width="100" text="First Name"></jqx-treegrid-column>
         <jqx-treegrid-column datafield-for="@(employee.LastName)" width="100" text="Last Name"></jqx-treegrid-column>
@@ -2201,7 +2220,7 @@ jqx-treegrid-columns tag helper should be defined within the jqx-treegrid tag he
 
 ### TreeMap
 
-The jqx-treemap tag helper adds a TreeMap component to a web page.
+The ```jqx-treemap``` tag helper adds a TreeMap component to a web page.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.Employee>
@@ -2217,7 +2236,7 @@ The jqx-treemap tag helper adds a TreeMap component to a web page.
 
 ### Validator
 
-The jqx-validator tag helper adds a Validator Chart component to a web page.
+The ```jqx-validator``` tag helper adds a Validator Chart component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -2269,7 +2288,7 @@ The jqx-validator tag helper adds a Validator Chart component to a web page.
 
 ### Window
 
-The jqx-window tag helper adds a Window Chart component to a web page.
+The ```jqx-window``` tag helper adds a Window Chart component to a web page.
 
 ```html
 @model IEnumerable<jQWidgets.AspNet.Core.Models.SalesEmployee>
@@ -2323,4 +2342,5 @@ The jqx-window tag helper adds a Window Chart component to a web page.
 </jqx-window>
 ```
 
-jqx-window-body tag helper defines the window's body. jqx-window-header tag helper defines the window's header.
+```jqx-window-body``` tag helper defines the window's body. <br />
+```jqx-window-header``` tag helper defines the window's header.
