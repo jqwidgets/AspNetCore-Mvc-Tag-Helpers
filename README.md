@@ -165,8 +165,8 @@ The ```jqx-bar-gauge``` tag helper adds a Bar Gauge component to a web page.
     };
 }
 <div class="example-description">ASP .NET MVC BarGauge Example</div><br />
-<jqx-bar-gauge colorScheme="scheme02" ranges="ranges" values="barGaugeValues" width="600" height="600" max="150"></jqx-bar-gauge>```
-
+<jqx-bar-gauge color-scheme="scheme02" ranges="ranges" values="barGaugeValues" width="600" height="600" max="150"></jqx-bar-gauge>```
+```
 ### Bullet Chart
 
 The ```jqx-bullet-chart``` tag helper adds a Bullet Chart component to a web page.
