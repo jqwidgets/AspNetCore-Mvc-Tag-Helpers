@@ -130,13 +130,13 @@ datafield-for - {{ModelExpression}} used for model binding and determines the co
 delete - {{String}} which determines the URL called when a Grid row is deleted.
 edit - {{String}} which determines the URL called when the Grid is edited.
 instance - {{String}} which determines the javascript member within the Script tag which refers to the Grid's instance. This member is useful when you want to dynamically invoke API members of the Javascript component.
-serverProcessing - {{Boolean}} which determines whether server processing is enabled.
-sourceId - {{String}} which determines the data source's ID member.
-sourceId-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
-sourceRoot - {{String}} which determines the data source's Root member.
-sourceTotalRecords - {{Integer}} which determines the data source's TotalRecords member.
-sourceUrl - {{String}} which determines the data source's URL.
-sourceModel - {{Model}} which determines the data source's Model.
+server-processing - {{Boolean}} which determines whether server processing is enabled.
+source-id - {{String}} which determines the data source's ID member.
+source-id-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
+source-root - {{String}} which determines the data source's Root member.
+source-total-records - {{Integer}} which determines the data source's TotalRecords member.
+source-url - {{String}} which determines the data source's URL.
+source-model - {{Model}} which determines the data source's Model.
 ```
 
 ```jqx-grid-columns``` tag helper should be defined within the ```jqx-grid``` tag helper and defines the Grid columns collection.<br />
