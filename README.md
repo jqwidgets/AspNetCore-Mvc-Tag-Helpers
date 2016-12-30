@@ -284,7 +284,7 @@ The ```jqx-chart``` tag helper adds a Chart component to a web page.
 <label>ASP .NET Core MVC Chart Tag Helper Example</label><br/><br/>
 <jqx-chart style="width: 850px; height: 500px;" color-scheme="scheme02" padding="padding" title-padding="titlePadding" title="Desktop browsers share" description="(source: wikipedia.org)" show-legend="false" legend-position="legendPosition" source="Model">
     <jqx-chart-series-groups>
-         <jqx-chart-serie-group showLabels="true" type=@SerieType.Pie>
+         <jqx-chart-serie-group show-labels="true" type=@SerieType.Pie>
                 <jqx-chart-series>
                     <jqx-chart-serie datafield="Share" display-text="Browser" label-radius="120" initial-angle="15" radius="170" center-offset="0" format-settings="formatSettings">
                    </jqx-chart-serie>
@@ -426,13 +426,13 @@ value-for - {{ModelExpression}} used for model binding and determines the value 
 delete - {{String}} which determines the URL called when a ComboBox item is deleted.
 edit - {{String}} which determines the URL called when a ComboBox item is updated.
 instance - {{String}} which determines the javascript member within the Script tag which refers to the ComboBox's instance. This member is useful when you want to dynamically invoke API members of the Javascript component.
-serverProcessing - {{Boolean}} which determines whether server processing is enabled.
-sourceId - {{String}} which determines the data source's ID member.
-sourceId-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
-sourceRoot - {{String}} which determines the data source's Root member.
-sourceTotalRecords - {{Integer}} which determines the data source's TotalRecords member.
-sourceUrl - {{String}} which determines the data source's URL.
-sourceModel - {{Model}} which determines the data source's Model.
+server-processing - {{Boolean}} which determines whether server processing is enabled.
+source-id - {{String}} which determines the data source's ID member.
+source-id-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
+source-root - {{String}} which determines the data source's Root member.
+source-total-records - {{Integer}} which determines the data source's TotalRecords member.
+source-url - {{String}} which determines the data source's URL.
+source-model - {{Model}} which determines the data source's Model.
 ```
 
 ### Complex Input
@@ -444,7 +444,7 @@ The ```jqx-complex-input``` tag helper adds a Complex Input component to a web p
     ViewData["Title"] = "ASP .NET MVC Complex Input Example";
 }
 <label>ASP .NET Core MVC Complex Input Example</label><br/><br/>
-<jqx-complex0input theme="@ViewData["Theme"]" width="250" height="25"></jqx-complex-input>
+<jqx-complex-input theme="@ViewData["Theme"]" width="250" height="25"></jqx-complex-input>
 ```
 
 ### DataTable
@@ -459,13 +459,13 @@ datafield-for - {{ModelExpression}} used for model binding and determines the co
 delete - {{String}} which determines the URL called when a DataTable row is deleted.
 edit - {{String}} which determines the URL called when the DataTable is edited.
 instance - {{String}} which determines the javascript member within the Script tag which refers to the DataTable's instance. This member is useful when you want to dynamically invoke API members of the Javascript component.
-serverProcessing - {{Boolean}} which determines whether server processing is enabled.
-sourceId - {{String}} which determines the data source's ID member.
-sourceId-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
-sourceRoot - {{String}} which determines the data source's Root member.
-sourceTotalRecords - {{Integer}} which determines the data source's TotalRecords member.
-sourceUrl - {{String}} which determines the data source's URL.
-sourceModel - {{Model}} which determines the data source's Model.
+server-processing - {{Boolean}} which determines whether server processing is enabled.
+source-id - {{String}} which determines the data source's ID member.
+source-id-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
+source-root - {{String}} which determines the data source's Root member.
+source-total-records - {{Integer}} which determines the data source's TotalRecords member.
+source-url - {{String}} which determines the data source's URL.
+source-model - {{Model}} which determines the data source's Model.
 ```
 
 ```jqx-datatable-columns``` tag helper should be defined within the ```jqx-datatable``` tag helper and defines the DataTable columns collection. <br />
@@ -974,7 +974,7 @@ value-for - {{ModelExpression}} used for model binding and determines the value 
 delete - {{String}} which determines the URL called when a DropDownList item is deleted.
 edit - {{String}} which determines the URL called when a DropDownList item is updated.
 instance - {{String}} which determines the javascript member within the Script tag which refers to the DropDownList's instance. This member is useful when you want to dynamically invoke API members of the Javascript component.
-serverProcessing - {{Boolean}} which determines whether server processing is enabled.
+server-processing - {{Boolean}} which determines whether server processing is enabled.
 source-id - {{String}} which determines the data source's ID member.
 source-id-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
 source-root - {{String}} which determines the data source's Root member.
@@ -1244,10 +1244,19 @@ The ```jqx-knob``` tag helper adds a Knob component to a web page.
 The ```jqx-layout``` tag helper adds a Layout component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxbuttons.js"></script>
+<script src="~/jqwidgets/jqxscrollbar.js"></script>
+<script src="~/jqwidgets/jqxpanel.js"></script>
+<script src="~/jqwidgets/jqxlayout.js"></script>
+<script src="~/jqwidgets/jqxribbon.js"></script>
+<script src="~/jqwidgets/jqxtree.js"></script>
+
 @model IEnumerable<jQWidgets.AspNet.Core.Models.TreeItem>
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
+
 @{
     ViewData["Title"] = "ASP .NET MVC Layout Example";
+
     // Create Layout Object.
     List<LayoutItem> layout = new List<LayoutItem>()
     {
@@ -1350,16 +1359,17 @@ The ```jqx-layout``` tag helper adds a Layout component to a web page.
         }
     };
 }
-<script>
 
+<script>
+ 
     function InitSolutionExplorerPanel() {
-        $('#solutionExplorerTree')[0].setAttribute("initInstance", "true");
+        $('#solutionExplorerTree')[0].setAttribute("init-instance", "true");       
     }
+
 </script>
-<label>ASP .NET Core MVC Layout Tag Helper Example</label><br/><br/>
 <jqx-layout width="800" height="600" layout="@layout" theme="@ViewData["Theme"]">
     <!--The panel content divs can have a flat structure-->
-    <!--autoHideGroup-->
+    <!--auto-hideGroup-->
     <div data-container="ToolboxPanel">
         List of tools
     </div>
@@ -1379,7 +1389,7 @@ The ```jqx-layout``` tag helper adds a Layout component to a web page.
     </div>
     <!--right tabbedGroup-->
     <div data-container="SolutionExplorerPanel">
-        <jqx-tree initInstance="false" theme="@ViewData["Theme"]" id="solutionExplorerTree" width="190" itemsMember="Items" displayMember="Label" source="Model" style="border: none;">
+        <jqx-tree init-instance="false" theme="@ViewData["Theme"]" id="solutionExplorerTree" width="190" items-member="Items" display-member="Label" source="Model" style="border: none;">
         </jqx-tree>
     </div>
     <div data-container="PropertiesPanel">
@@ -1432,13 +1442,16 @@ The ```jqx-layout``` tag helper adds a Layout component to a web page.
         </div>
     </div>
 </jqx-layout>
+
 ```
 
 ### Linear Gauge
 
-The ```jqx-lineargauge``` tag helper adds a Linear Gauge component to a web page.
+The ```jqx-linear-gauge``` tag helper adds a Linear Gauge component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxgauge.js"></script>
+
 @using jQWidgets.AspNetCore.Mvc.TagHelpers;
 @{
     ViewData["Title"] = "ASP .NET MVC Linear Gauge Example";
@@ -1453,6 +1466,7 @@ The ```jqx-lineargauge``` tag helper adds a Linear Gauge component to a web page
     GaugeTicks ticksMajor = new GaugeTicks() { Interval = 10, Size = "10%" };
     GaugePointer pointer = new GaugePointer() { Size = "5%" };
 }
+
 <script>
     function formatValue(value, position) {
         if (position === 'far') {
@@ -1468,32 +1482,40 @@ The ```jqx-lineargauge``` tag helper adds a Linear Gauge component to a web page
         return value + '';
     }
 </script>
-<label>ASP .NET Core MVC Linear Gauge Tag Helper Example</label><br/><br/>
-<jqx-lineargauge width="100" max="60" orientation="Orientation.Vertical" height="350" pointer="pointer" ranges="ranges" labels="labels" ticksMinor="ticksMinor" ticksMajor="ticksMajor" value="50" colorScheme="scheme05" animationDuration="1200"></jqx-lineargauge>
+<jqx-linear-gauge width="100" max="60" orientation="Orientation.Vertical" height="350" pointer="pointer" ranges="ranges" labels="labels" ticks-minor="ticksMinor" ticks-major="ticksMajor" value="50" colorScheme="scheme05" animationDuration="1200"></jqx-linear-gauge>
+
 Link Button
 
-The jqx-linkbutton tag helper adds a Link Button component to a web page.
+The jqx-link-button tag helper adds a Link Button component to a web page.
+```html
+<script src="~/jqwidgets/jqxlinkbutton.js"></script>
+
 @{
     ViewData["Title"] = "ASP .NET MVC Link Button Example";
 }
-<label>ASP .NET Core MVC Link Button Tag Helper Example</label><br/><br/>
-<jqx-linkbutton width="200px" height="25px" theme="@ViewData["Theme"]" target="_blank" href="http://www.jqwidgets.com">Link Button</jqx-linkbutton>
+
+<jqx-link-button theme="@ViewData["Theme"]" target="_blank" href="http://www.jqwidgets.com">Link Button</jqx-link-button>
 ```
 
 ### List Box
 
-The ```jqx-listbox``` tag helper adds a List Box component to a web page.
+The ```jqx-list-box``` tag helper adds a List Box component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxbuttons.js"></script>
+<script src="~/jqwidgets/jqxscrollbar.js"></script>
+<script src="~/jqwidgets/jqxlistbox.js"></script>
+<script src="~/jqwidgets/jqxinput.js"></script>
+
 @model IEnumerable<jQWidgets.AspNet.Core.Models.SalesEmployee>
+
 @{
     ViewData["Title"] = "ASP .NET MVC ListBox Example";
 }
 @{
     var employee = Model.FirstOrDefault();
 }
-<label>ASP .NET Core MVC List Box Tag Helper Example</label><br/><br/>
-<jqx-listbox displayMember="Name" selectedIndex="0" edit="@Url.Action("EditItem","TagHelpers")" create="@Url.Action("AddItem","TagHelpers")" delete="@Url.Action("DeleteItem","TagHelpers")" instance="listInstance()" valueMember="ID" theme="@ViewData["Theme"]" width="250" height="300" source="Model"></jqx-listbox>
+<jqx-list-box display-member="Name" selected-index="0" edit="@Url.Action("EditItem","TagHelpers")" create="@Url.Action("AddItem","TagHelpers")" delete="@Url.Action("DeleteItem","TagHelpers")" instance="listInstance()" value-member="ID" theme="@ViewData["Theme"]" width="250" height="300" source="Model"></jqx-list-box>
 <div style="margin-top:30px;">
     <label>Add/Delete/Update</label>
     <table>
@@ -1511,6 +1533,7 @@ The ```jqx-listbox``` tag helper adds a List Box component to a web page.
     function addItem() {
        list.addItem($("#name").val());
     }
+
     function removeItem() {
         var item = list.getSelectedItem();
         if (item)
@@ -1518,6 +1541,7 @@ The ```jqx-listbox``` tag helper adds a List Box component to a web page.
             list.removeItem(item);
         }
     }
+
     function updateItem() {
         var item = list.getSelectedItem();
         if (item)
@@ -1525,6 +1549,7 @@ The ```jqx-listbox``` tag helper adds a List Box component to a web page.
             list.updateItem({value: item.value, label: $("#name").val() }, item);
         }
     }
+
     function listInstance(instance) {
         list = instance;
     }
@@ -1533,109 +1558,116 @@ The ```jqx-listbox``` tag helper adds a List Box component to a web page.
 
 ### List Menu
 
-The ```jqx-listmenu``` tag helper adds a List Menu component to a web page.
+The ```jqx-list-menu``` tag helper adds a List Menu component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxbuttons.js"></script>
+<script src="~/jqwidgets/jqxscrollbar.js"></script>
+<script src="~/jqwidgets/jqxpanel.js"></script>
+<script src="~/jqwidgets/jqxlistmenu.js"></script>
+
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
+
 @{
     ViewData["Title"] = "ASP .NET MVC ListMenu Example";
 }
-<script>
-</script>
-<label>ASP .NET Core MVC ListMenu Tag Helper Example</label><br/><br/>
-<jqx-listmenu theme="@ViewData["Theme"]" enableScrolling="false" width="350">
-    <jqx-listmenu-items>
-      <jqx-listmenu-item>
+
+
+<jqx-list-menu theme="@ViewData["Theme"]" enable-scrolling="false" width="350">
+    <jqx-list-menu-items>
+      <jqx-list-menu-item>
             OSI
-          <jqx-listmenu-items>
-              <jqx-listmenu-item>
+          <jqx-list-menu-items>
+              <jqx-list-menu-item>
                   Application Layer
-                  <jqx-listmenu-items>
-                      <jqx-listmenu-item>SIP</jqx-listmenu-item>
-                      <jqx-listmenu-item>DNS</jqx-listmenu-item>
-                      <jqx-listmenu-item>FTP</jqx-listmenu-item>
-                      <jqx-listmenu-item>RTP</jqx-listmenu-item>
-                      <jqx-listmenu-item>DHCP</jqx-listmenu-item>
-                  </jqx-listmenu-items>
-              </jqx-listmenu-item>
-          </jqx-listmenu-items>
-        </jqx-listmenu-item>
-        <jqx-listmenu-item>
+                  <jqx-list-menu-items>
+                      <jqx-list-menu-item>SIP</jqx-list-menu-item>
+                      <jqx-list-menu-item>DNS</jqx-list-menu-item>
+                      <jqx-list-menu-item>FTP</jqx-list-menu-item>
+                      <jqx-list-menu-item>RTP</jqx-list-menu-item>
+                      <jqx-list-menu-item>DHCP</jqx-list-menu-item>
+                  </jqx-list-menu-items>
+              </jqx-list-menu-item>
+          </jqx-list-menu-items>         
+        </jqx-list-menu-item>
+        <jqx-list-menu-item>
             TCP/IP
-            <jqx-listmenu-items>
-                <jqx-listmenu-item>
+            <jqx-list-menu-items>
+                <jqx-list-menu-item>
                     Application layer
-                    <jqx-listmenu-items>
-                        <jqx-listmenu-item>DHCP</jqx-listmenu-item>
-                        <jqx-listmenu-item>DNS</jqx-listmenu-item>
-                        <jqx-listmenu-item>FTP</jqx-listmenu-item>
-                        <jqx-listmenu-item>HTTP</jqx-listmenu-item>
-                        <jqx-listmenu-item>IMAP</jqx-listmenu-item>
-                        <jqx-listmenu-item>LDAP</jqx-listmenu-item>
-                        <jqx-listmenu-item>XMPP</jqx-listmenu-item>
-                        <jqx-listmenu-item>SSH</jqx-listmenu-item>
-                        <jqx-listmenu-item>RIP</jqx-listmenu-item>
-                    </jqx-listmenu-items>
-                </jqx-listmenu-item>
-                <jqx-listmenu-item>
+                    <jqx-list-menu-items>
+                        <jqx-list-menu-item>DHCP</jqx-list-menu-item>
+                        <jqx-list-menu-item>DNS</jqx-list-menu-item>
+                        <jqx-list-menu-item>FTP</jqx-list-menu-item>
+                        <jqx-list-menu-item>HTTP</jqx-list-menu-item>
+                        <jqx-list-menu-item>IMAP</jqx-list-menu-item>
+                        <jqx-list-menu-item>LDAP</jqx-list-menu-item>
+                        <jqx-list-menu-item>XMPP</jqx-list-menu-item>
+                        <jqx-list-menu-item>SSH</jqx-list-menu-item>
+                        <jqx-list-menu-item>RIP</jqx-list-menu-item>
+                    </jqx-list-menu-items>
+                </jqx-list-menu-item>
+                <jqx-list-menu-item>
                     Transport layer
-                    <jqx-listmenu-items>
-                        <jqx-listmenu-item>TCP</jqx-listmenu-item>
-                        <jqx-listmenu-item>UDP</jqx-listmenu-item>
-                        <jqx-listmenu-item>SCTP</jqx-listmenu-item>
-                    </jqx-listmenu-items>
-                </jqx-listmenu-item>
-                <jqx-listmenu-item>
+                    <jqx-list-menu-items>
+                        <jqx-list-menu-item>TCP</jqx-list-menu-item>
+                        <jqx-list-menu-item>UDP</jqx-list-menu-item>
+                        <jqx-list-menu-item>SCTP</jqx-list-menu-item>
+                    </jqx-list-menu-items>
+                </jqx-list-menu-item>
+                <jqx-list-menu-item>
                     Internet layer
-                    <jqx-listmenu-items>
-                        <jqx-listmenu-item>IP</jqx-listmenu-item>
-                        <jqx-listmenu-item>ICMP</jqx-listmenu-item>
-                        <jqx-listmenu-item>ECN</jqx-listmenu-item>
-                    </jqx-listmenu-items>
-                </jqx-listmenu-item>
-                <jqx-listmenu-item>
+                    <jqx-list-menu-items>
+                        <jqx-list-menu-item>IP</jqx-list-menu-item>
+                        <jqx-list-menu-item>ICMP</jqx-list-menu-item>
+                        <jqx-list-menu-item>ECN</jqx-list-menu-item>
+                    </jqx-list-menu-items>
+                </jqx-list-menu-item>
+                <jqx-list-menu-item>
                     Link layer
-                    <jqx-listmenu-items>
-                        <jqx-listmenu-item>ARP</jqx-listmenu-item>
-                        <jqx-listmenu-item>NDP</jqx-listmenu-item>
-                        <jqx-listmenu-item>DSL</jqx-listmenu-item>
-                    </jqx-listmenu-items>
-                </jqx-listmenu-item>
-            </jqx-listmenu-items>
-        </jqx-listmenu-item>
-    </jqx-listmenu-items>
-</jqx-listmenu>
+                    <jqx-list-menu-items>
+                        <jqx-list-menu-item>ARP</jqx-list-menu-item>
+                        <jqx-list-menu-item>NDP</jqx-list-menu-item>
+                        <jqx-list-menu-item>DSL</jqx-list-menu-item>
+                    </jqx-list-menu-items>
+                </jqx-list-menu-item>
+            </jqx-list-menu-items>
+        </jqx-list-menu-item>
+    </jqx-list-menu-items>
+</jqx-list-menu>
+
 ```
 
 ### Masked Input
 
-The ```jqx-maskedinput``` tag helper adds a Masked Input component to a web page.
+The ```jqx-masked-input``` tag helper adds a Masked Input component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxmaskedinput.js"></script>
+
 @{
     ViewData["Title"] = "ASP .NET MVC MaskedInput Example";
 }
-<label>ASP .NET Core MVC Masked Input Example</label><br/><br/>
     <div style='margin-top: 10px;'>
         Numeric
     </div>
-    <jqx-maskedinput width="250" style='margin-top: 3px;' id='numericInput'></jqx-maskedinput>
+    <jqx-masked-input width="250" style='margin-top: 3px;' id='numericInput'></jqx-masked-input>
     <div style='margin-top: 10px;'>
         Zip Code
     </div>
-    <jqx-maskedinput width="250" mask="#####-####" style='margin-top: 3px;' id='zipCodeInput'></jqx-maskedinput>
+    <jqx-masked-input width="250" mask="#####-####" style='margin-top: 3px;' id='zipCodeInput'></jqx-masked-input>
     <div style='margin-top: 10px;'>
         SSN
     </div>
-    <jqx-maskedinput width="250" mask="###-##-####" style='margin-top: 3px;' id='ssnInput'></jqx-maskedinput>
+    <jqx-masked-input width="250" mask="###-##-####" style='margin-top: 3px;' id='ssnInput'></jqx-masked-input>
     <div style='margin-top: 10px;'>
         Phone Number
     </div>
-    <jqx-maskedinput width="250" mask="(###)###-####" style='margin-top: 3px;' id='phoneInput'> </jqx-maskedinput>
+    <jqx-masked-input width="250" mask="(###)###-####" style='margin-top: 3px;' id='phoneInput'> </jqx-masked-input>
     <div style='margin-top: 10px;'>
         Disabled
     </div>
-    <jqx-maskedinput width="250" disabled="true"  style='margin-top: 3px;' id='disabledInput'></jqx-maskedinput>
+    <jqx-masked-input width="250" disabled="true"  style='margin-top: 3px;' id='disabledInput'></jqx-masked-input>
 ```
 
 ### Menu
@@ -1736,27 +1768,30 @@ The ```jqx-menu``` tag helper adds a Menu component to a web page.
 
 ### Navigation Bar
 
-The ```jqx-navigationbar``` tag helper adds a NavigationBar component to a web page.
+The ```jqx-navigation-bar``` tag helper adds a NavigationBar component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxnavigationbar.js"></script>
+
 @{
     ViewData["Title"] = "ASP .NET MVC NavigationBar Example";
 }
-<label>ASP .NET Core MVC Navigation Bar Example</label><br/><br/>
-<jqx-navigationbar height="300" width="500" theme="@ViewData["Theme"]">
-    <jqx-navigationbar-panel>
-        <jqx-navigationbar-panel-header>Header 1</jqx-navigationbar-panel-header>
-        <jqx-navigationbar-panel-body><label style="padding: 15px;">Body 1</label></jqx-navigationbar-panel-body>
-    </jqx-navigationbar-panel>
-    <jqx-navigationbar-panel>
-        <jqx-navigationbar-panel-header>Header 2</jqx-navigationbar-panel-header>
-        <jqx-navigationbar-panel-body><label style="padding: 15px;">Body 2</label></jqx-navigationbar-panel-body>
-    </jqx-navigationbar-panel>
-    <jqx-navigationbar-panel>
-        <jqx-navigationbar-panel-header>Header 3</jqx-navigationbar-panel-header>
-        <jqx-navigationbar-panel-body><label style="padding: 15px;">Body 3</label></jqx-navigationbar-panel-body>
-    </jqx-navigationbar-panel>
-</jqx-navigationbar>
+
+<jqx-navigation-bar height="300" width="500" theme="@ViewData["Theme"]">
+    <jqx-navigation-bar-panel>
+        <jqx-navigation-bar-panel-header>Header 1</jqx-navigation-bar-panel-header>
+        <jqx-navigation-bar-panel-body><label style="padding: 15px;">Body 1</label></jqx-navigation-bar-panel-body>
+    </jqx-navigation-bar-panel>
+    <jqx-navigation-bar-panel>
+        <jqx-navigation-bar-panel-header>Header 2</jqx-navigation-bar-panel-header>
+        <jqx-navigation-bar-panel-body><label style="padding: 15px;">Body 2</label></jqx-navigation-bar-panel-body>
+    </jqx-navigation-bar-panel>
+    <jqx-navigation-bar-panel>
+        <jqx-navigation-bar-panel-header>Header 3</jqx-navigation-bar-panel-header>
+        <jqx-navigation-bar-panel-body><label style="padding: 15px;">Body 3</label></jqx-navigation-bar-panel-body>
+    </jqx-navigation-bar-panel>  
+</jqx-navigation-bar>
+
 ```
 
 ### Notification
@@ -1783,17 +1818,21 @@ The ```jqx-notification``` tag helper adds a Notification component to a web pag
 
 ### Number Input
 
-The ```jqx-numberinput``` tag helper adds a Number Input component to a web page.
+The ```jqx-number-input``` tag helper adds a Number Input component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxbuttons.js"></script>
+<script src="~/jqwidgets/jqxnumberinput.js"></script>
 @{
     ViewData["Title"] = "ASP .NET MVC NumberInput Example";
 }
-<label>ASP .NET Core MVC Number Input Tag Helper Example</label><br/><br/>
 <label>Default Input</label>
-<jqx-numberinput spinButtons="true" theme="@ViewData["Theme"]" width="300" height="25" ></jqx-numberinput>
+
+<jqx-number-input spin-buttons="true" theme="@ViewData["Theme"]" width="300" height="25" ></jqx-number-input>
 <label>Simple Input</label>
-<jqx-numberinput inputMode="simple" spinButtons="true" theme="@ViewData["Theme"]" width="300" height="25"></jqx-numberinput>
+
+<jqx-number-input input-mode="simple" spin-buttons="true" theme="@ViewData["Theme"]" width="300" height="25"></jqx-number-input>
+
 ```
 
 ### Panel
@@ -1847,7 +1886,7 @@ The ```jqx-passwordinput``` tag helper adds a Password Input component to a web 
     <div style='margin-top: 10px;'>
         Password Input
     </div>
-    <jqx-passwordinput width="200" height="25" placeHolder="Enter password:" showStrength="true"></jqx-passwordinput>
+    <jqx-password-input width="200" height="25" place-holder="Enter password:" showStrength="true"></jqx-password-input>
 ```
 
 ### Popover
@@ -1881,22 +1920,27 @@ The ```jqx-popover``` tag helper adds a popover components to a web page.
 
 ### Progress Bar
 
-The ```jqx-progressbar``` tag helper adds a Progress Bar component to a web page.
+The ```jqx-progress-bar``` tag helper adds a Progress Bar component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxprogressbar.js"></script>
+
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
+
 @{
     ViewData["Title"] = "ASP .NET MVC ProgressBar Example";
 }
-<label>ASP .NET Core MVC ProgressBar Tag Helper Example</label><br/><br/>
-<jqx-progressbar id="toolbar" theme="@ViewData["theme"]" value="50" width="300" height="35"></jqx-progressbar>
+
+<jqx-progress-bar id="toolbar" theme="@ViewData["theme"]" value="50" width="300" height="35"></jqx-progress-bar>
 ```
 
 ### Radio Button
 
-The ```jqx-radiobutton``` tag helper adds a Radio Button component to a web page.
+The ```jqx-radio-button``` tag helper adds a Radio Button component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxradiobutton.js"></script>
+
 @model jQWidgetsDemosContext
 @using jQWidgets.AspNet.Core.Models;
 @{
@@ -1923,16 +1967,16 @@ The ```jqx-radiobutton``` tag helper adds a Radio Button component to a web page
         month = true;
     }
 }
-<label>ASP .NET Core MVC Radio Button Tag Helper Example</label><br/><br/>
-<jqx-radiobutton width="200" height="30" theme="@ViewData["Theme"]" on-checked="@Url.Action("Year", "TagHelpers")" checked="year">12 Months Contract</jqx-radiobutton>
-<jqx-radiobutton width="200" height="30" theme="@ViewData["Theme"]" on-checked="@Url.Action("HalfYear", "TagHelpers")" checked="halfYear">6 Months Contract</jqx-radiobutton>
-<jqx-radiobutton width="200" height="30" theme="@ViewData["Theme"]" on-checked="@Url.Action("QuarterYear", "TagHelpers")" checked="quarterYear">3 Months Contract</jqx-radiobutton>
-<jqx-radiobutton width="200" height="30" theme="@ViewData["Theme"]" on-checked="@Url.Action("Month", "TagHelpers")" checked="month">1 Month Contract</jqx-radiobutton>
+
+<jqx-radio-button width="200" height="30" theme="@ViewData["Theme"]" on-checked="@Url.Action("Year", "TagHelpers")" checked="year">12 Months Contract</jqx-radio-button>
+<jqx-radio-button width="200" height="30" theme="@ViewData["Theme"]" on-checked="@Url.Action("HalfYear", "TagHelpers")" checked="halfYear">6 Months Contract</jqx-radio-button>
+<jqx-radio-button width="200" height="30" theme="@ViewData["Theme"]" on-checked="@Url.Action("QuarterYear", "TagHelpers")" checked="quarterYear">3 Months Contract</jqx-radio-button>
+<jqx-radio-button width="200" height="30" theme="@ViewData["Theme"]" on-checked="@Url.Action("Month", "TagHelpers")" checked="month">1 Month Contract</jqx-radio-button>
 ```
 
 ### Range Selector
 
-The ```jqx-rangeselector``` tag helper adds a Range Selector component to a web page.
+The ```jqx-range-selector``` tag helper adds a Range Selector component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -1951,7 +1995,7 @@ The ```jqx-rangeselector``` tag helper adds a Range Selector component to a web 
     };
 }
 <label>ASP .NET Core MVC Range Selector Tag Helper Example</label><br/><br/>
-<jqx-rangeselector settings="settings" ></jqx-rangeselector>
+<jqx-range-selector settings="settings" ></jqx-range-selector>
 ```
 
 ### Rating
@@ -2048,12 +2092,12 @@ create - {{String}} which determines the URL called when a Scheduler appointment
 delete - {{String}} which determines the URL called when a Scheduler appointment is deleted.
 edit - {{String}} which determines the URL called when a Scheduler appointment is updated.
 instance - {{String}} which determines the javascript member within the Script tag which refers to the Input's instance. This member is useful when you want to dynamically invoke API members of the Javascript component.
-sourceId - {{String}} which determines the data source's ID member.
-sourceId-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
-sourceRoot - {{String}} which determines the data source's Root member.
-sourceTotalRecords - {{Integer}} which determines the data source's TotalRecords member.
-sourceUrl - {{String}} which determines the data source's URL.
-sourceModel - {{Model}} which determines the data source's Model.
+source-id - {{String}} which determines the data source's ID member.
+source-id-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
+source-root - {{String}} which determines the data source's Root member.
+source-total-records - {{Integer}} which determines the data source's TotalRecords member.
+source-url - {{String}} which determines the data source's URL.
+source-model - {{Model}} which determines the data source's Model.
 ```
 
 ```jqx-scheduler-views``` tag helper defines the Scheduler's views collection. <br />
@@ -2177,14 +2221,14 @@ The Splitter component should have exactly two such tag helpers within the main 
 
 ### Switch Button
 
-The ```jqx-switchbutton``` tag helper adds a Switch Button component to a web page.
+The ```jqx-switch-button``` tag helper adds a Switch Button component to a web page.
 
 ```html
 @{
     ViewData["Title"] = "ASP .NET MVC Switch Button Example";
 }
 <label>ASP .NET Core MVC SwitchButton Tag Helper Example</label><br/><br/>
-<jqx-switchbutton theme="@ViewData["Theme"]" width="150" height="30"></jqx-switchbutton>
+<jqx-switch-button theme="@ViewData["Theme"]" width="150" height="30"></jqx-switch-button>
 ```
 
 ### Tabs
@@ -2195,11 +2239,18 @@ The ```jqx-tabs``` tag helper adds a Tabs component to a web page. <br />
 ```jqx-tab-panel-body``` tag helper defines a panel's body.
 
 ```html
+<script src="~/jqwidgets/jqxtabs.js"></script>
+
+
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
+
 @{
     ViewData["Title"] = "ASP .NET MVC Tabs Example";
 }
-<label>ASP .NET Core MVC Tabs Tag Helper Example</label><br/><br/>
+
+<script>
+ 
+</script>
 <jqx-tabs theme="@ViewData["Theme"]" width="850">
     <jqx-tab-panel>
         <jqx-tab-panel-header style="margin-left: 30px;">Node.js</jqx-tab-panel-header>
@@ -2260,6 +2311,7 @@ The ```jqx-tabs``` tag helper adds a Tabs component to a web page. <br />
             manipulation of text files.</jqx-tab-panel-body>
     </jqx-tab-panel>
 </jqx-tabs>
+
 ```
 
 ### TextArea
@@ -2267,7 +2319,13 @@ The ```jqx-tabs``` tag helper adds a Tabs component to a web page. <br />
 The ```jqx-textarea``` tag helper adds a Text Area component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxbuttons.js"></script>
+<script src="~/jqwidgets/jqxscrollbar.js"></script>
+<script src="~/jqwidgets/jqxtextarea.js"></script>
+
+
 @model IEnumerable<jQWidgets.AspNet.Core.Models.SalesEmployee>
+
 @{
     ViewData["Title"] = "ASP .NET MVC TextArea Example";
 }
@@ -2277,9 +2335,8 @@ The ```jqx-textarea``` tag helper adds a Text Area component to a web page.
         document.getElementById("log").innerHTML = "Label: " + args.label + ", Value: " + args.value;;
     }
 </script>
-<label>ASP .NET Core MVC Text Area Tag Helper Example</label><br/><br/>
 <label>Enter Name:</label>
-<jqx-textarea on-change="change()" displayMember="Name" selectedIndex="0" valueMember="ID" theme="@ViewData["Theme"]" width="250" height="100" source="Model"></jqx-textarea>
+<jqx-text-area on-change="change()" display-member="Name" selected-index="0" value-member="ID" theme="@ViewData["Theme"]" width="250" height="100" source="Model"></jqx-text-area>
 (ex: An)
 <br /><br />
 <div id="log"></div>
@@ -2287,10 +2344,20 @@ The ```jqx-textarea``` tag helper adds a Text Area component to a web page.
 
 ### Toolbar
 
-The ```jqx-toolbar``` tag helper adds a Toolbar component to a web page.
+The ```jqx-tool-bar``` tag helper adds a Toolbar component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxbuttons.js"></script>
+<script src="~/jqwidgets/jqxscrollbar.js"></script>
+<script src="~/jqwidgets/jqxlistbox.js"></script>
+<script src="~/jqwidgets/jqxinput.js"></script>
+<script src="~/jqwidgets/jqxdropdownlist.js"></script>
+<script src="~/jqwidgets/jqxcombobox.js"></script>
+<script src="~/jqwidgets/jqxtoolbar.js"></script>
+
+
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
+
 @{
     ViewData["Title"] = "ASP .NET MVC Toolbar Example";
 }
@@ -2301,9 +2368,11 @@ The ```jqx-toolbar``` tag helper adds a Toolbar component to a web page.
         height: 17px;
     }
 </style>
+
 <script>
     function initTools (type, index, tool, menuToolIninitialization) {
         var theme = $("#toolbar").jqxToolBar("theme");
+
         if (type == "toggleButton") {
             var icon = $("<div class='jqx-editor-toolbar-icon jqx-editor-toolbar-icon-" + theme + " buttonIcon'></div>");
         }
@@ -2352,13 +2421,13 @@ The ```jqx-toolbar``` tag helper adds a Toolbar component to a web page.
         }
     }
 </script>
-<label>ASP .NET Core MVC Toolbar Tag Helper Example</label><br/><br/>
-<jqx-toolbar id="toolbar" theme="@ViewData["theme"]" initTools="initTools()" tools="toggleButton toggleButton toggleButton | toggleButton | dropdownlist combobox | input | custom" width="800" height="35"></jqx-toolbar>
+<jqx-tool-bar id="toolbar" theme="@ViewData["theme"]" initTools="initTools()" tools="toggleButton toggleButton toggleButton | toggleButton | dropdownlist combobox | input | custom" width="800" height="35"></jqx-tool-bar>
+
 ```
 
 ### Tooltip
 
-The ```jqx-tooltip``` tag helper adds a Tooltip component to a web page.
+The ```jqx-tool-tip``` tag helper adds a Tooltip component to a web page.
 
 ```html
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
@@ -2374,7 +2443,7 @@ The ```jqx-tooltip``` tag helper adds a Tooltip component to a web page.
 }
 <label>ASP .NET Core MVC Tooltip Tag Helper Example</label><br/><br/>
 <span id="tooltip">Move cursor here to see the tooltip</span>
-<jqx-tooltip settings="settings"></jqx-tooltip>
+<jqx-tool-tip settings="settings"></jqx-tool-tip>
 ```
 
 ### Tree
@@ -2388,7 +2457,7 @@ The ```jqx-tree``` tag helper adds a Tree component to a web page.
     ViewData["Title"] = "ASP .NET MVC Tree Example";
 }
 <label>ASP .NET Core MVC Tree Tag Helper Example</label><br/><br/>
-<jqx-tree theme="@ViewData["Theme"]" id="solutionExplorerTree" width="200" itemsMember="Items" displayMember="Label" source="Model"></jqx-tree>
+<jqx-tree theme="@ViewData["Theme"]" id="solutionExplorerTree" width="200" items-member="Items" display-member="Label" source="Model"></jqx-tree>
 ```
 
 ### TreeGrid
@@ -2402,13 +2471,13 @@ datafield-for - {{ModelExpression}} used for model binding and determines the co
 delete - {{String}} which determines the URL called when a TreeGrid row is deleted.
 edit - {{String}} which determines the URL called when the TreeGrid is edited.
 instance - {{String}} which determines the javascript member within the Script tag which refers to the TreeGrid's instance. This member is useful when you want to dynamically invoke API members of the Javascript component.
-serverProcessing - {{Boolean}} which determines whether server processing is enabled.
-sourceId - {{String}} which determines the data source's ID member.
-sourceId-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
-sourceRoot - {{String}} which determines the data source's Root member.
-sourceTotalRecords - {{Integer}} which determines the data source's TotalRecords member.
-sourceUrl - {{String}} which determines the data source's URL.
-sourceModel - {{Model}} which determines the data source's Model.
+server-processing - {{Boolean}} which determines whether server processing is enabled.
+source-id - {{String}} which determines the data source's ID member.
+source-id-for - {{ModelExpression}} used for model binding and determines the data source's ID member.
+source-root - {{String}} which determines the data source's Root member.
+source-total-records - {{Integer}} which determines the data source's TotalRecords member.
+source-url - {{String}} which determines the data source's URL.
+source-model - {{Model}} which determines the data source's Model.
 ```
 
 ```jqx-treegrid-columns``` tag helper should be defined within the ```jqx-treegrid``` tag helper and defines the TreeGrid columns collection. <br />
@@ -2417,7 +2486,14 @@ sourceModel - {{Model}} which determines the data source's Model.
 ```jqx-treegrid-column-group``` tag helper should be defined within the ```jqx-treegrid-column-groups``` tag helper and defines a TreeGrid column group.
 
 ```html
+<script src="~/jqwidgets/jqxbuttons.js"></script>
+<script src="~/jqwidgets/jqxscrollbar.js"></script>
+<script src="~/jqwidgets/jqxlistbox.js"></script>
+<script src="~/jqwidgets/jqxdropdownlist.js"></script>
+<script src="~/jqwidgets/jqxdatatable.js"></script>
+<script src="~/jqwidgets/jqxtreegrid.js"></script>
 @model IEnumerable<jQWidgets.AspNet.Core.Models.Employee>
+
 @{
     ViewData["Title"] = "ASP .NET MVC TreeGrid Example";
 }
@@ -2435,17 +2511,18 @@ sourceModel - {{Model}} which determines the data source's Model.
         treeGridInstance.expandRow(2);
     }
 </script>
-<label>ASP .NET Core MVC Tree Grid Example</label><br/><br/>
-<jqx-treegrid keyDataField-for="@(employee.EmployeeID)" ready="treeGridReady()" sourceId-for="@(employee.EmployeeID)" instance="getInstance()" parentDataField-for="@(employee.ManagerID)" theme="@ViewData["Theme"]" sortable="true" width="850" source="Model">
-    <jqx-treegrid-columns>
-        <jqx-treegrid-column dataField-for="@(employee.FirstName)" width="100" text="First Name"></jqx-treegrid-column>
-        <jqx-treegrid-column datafield-for="@(employee.LastName)" width="100" text="Last Name"></jqx-treegrid-column>
-        <jqx-treegrid-column datafield-for="@(employee.Title)" width="150"></jqx-treegrid-column>
-        <jqx-treegrid-column datafield-for="@(employee.Address)" width="200"></jqx-treegrid-column>
-        <jqx-treegrid-column datafield-for="@(employee.City)" width="150"></jqx-treegrid-column>
-        <jqx-treegrid-column datafield-for="@(employee.Country)"></jqx-treegrid-column>
-    </jqx-treegrid-columns>
-</jqx-treegrid>
+<jqx-tree-grid key-datafield-for="@(employee.EmployeeID)" ready="treeGridReady()" source-id-for="@(employee.EmployeeID)" instance="getInstance()" parent-datafield-for="@(employee.ManagerID)" theme="@ViewData["Theme"]" sortable="true" width="850" source="Model"> 
+    <jqx-tree-grid-columns>
+        <jqx-tree-grid-column dataField-for="@(employee.FirstName)" width="100" text="First Name"></jqx-tree-grid-column>
+        <jqx-tree-grid-column datafield-for="@(employee.LastName)" width="100" text="Last Name"></jqx-tree-grid-column>
+        <jqx-tree-grid-column datafield-for="@(employee.Title)" width="150"></jqx-tree-grid-column>
+        <jqx-tree-grid-column datafield-for="@(employee.Address)" width="200"></jqx-tree-grid-column>
+        <jqx-tree-grid-column datafield-for="@(employee.City)" width="150"></jqx-tree-grid-column>
+        <jqx-tree-grid-column datafield-for="@(employee.Country)"></jqx-tree-grid-column>
+    </jqx-tree-grid-columns>
+</jqx-tree-grid>
+
+
 ```
 
 ### TreeMap
@@ -2453,15 +2530,19 @@ sourceModel - {{Model}} which determines the data source's Model.
 The ```jqx-treemap``` tag helper adds a TreeMap component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxtreemap.js"></script>
+
 @model IEnumerable<jQWidgets.AspNet.Core.Models.Employee>
+
 @{
     ViewData["Title"] = "ASP .NET MVC TreeMap Example";
 }
 @{
     var employee = Model.FirstOrDefault();
 }
-<label>ASP .NET Core MVC Tree Map Tag Helper Example</label><br/><br/>
-<jqx-treemap displayMember="FirstName" valueMember="EmployeeID" theme="@ViewData["Theme"]" width="850" source="Model"></jqx-treemap>
+<jqx-tree-map display-member="FirstName" value-member="EmployeeID" theme="@ViewData["Theme"]" width="850" source="Model"></jqx-tree-map>
+
+
 ```
 
 ### Validator
@@ -2469,9 +2550,17 @@ The ```jqx-treemap``` tag helper adds a TreeMap component to a web page.
 The ```jqx-validator``` tag helper adds a Validator Chart component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxvalidator.js"></script>
+<script src="~/jqwidgets/jqxbuttons.js"></script>
+<script src="~/jqwidgets/jqxcheckbox.js"></script>
+<script src="~/jqwidgets/jqxinput.js"></script>
+<script src="~/jqwidgets/jqxpasswordinput.js"></script>
+
 @using jQWidgets.AspNetCore.Mvc.TagHelpers
+
 @{
     ViewData["Title"] = "ASP .NET MVC Validator Example";
+
     List<KeyValuePair<string, object>> settings = new List<KeyValuePair<string, object>>()
     {
            new KeyValuePair<string, object>("rules", new List<ValidatorRule>()
@@ -2493,8 +2582,7 @@ The ```jqx-validator``` tag helper adds a Validator Chart component to a web pag
         validator.validate();
     }
 </script>
-<label>ASP .NET Core MVC Validator Example</label><br/><br/>
-<jqx-validator hintType="label" instance="getValidator()" settings="settings"></jqx-validator>
+<jqx-validator hint-type="label" instance="getValidator()" settings="settings"></jqx-validator>
 <form class="form" id="form" target="form-iframe" method="post" action="login.php" style="width: 650px;">
     <div>
         <h2>Login Demo</h2>
@@ -2505,10 +2593,10 @@ The ```jqx-validator``` tag helper adds a Validator Chart component to a web pag
     </div>
     <label>Password:</label>
     <div style="margin-top:10px;">
-        <jqx-passwordinput height="25" theme="@ViewData["theme"]" type="password" id="password" name="password"></jqx-passwordinput>
+        <jqx-password-input height="25" theme="@ViewData["theme"]" type="password" id="password" name="password"></jqx-password-input>
     </div>
     <div style="margin-top:10px;">
-        <jqx-checkbox theme="@ViewData["theme"]" name="rememberme" id="rememberme">Keep me logged in on this computer</jqx-checkbox>
+        <jqx-check-box theme="@ViewData["theme"]" name="rememberme" id="rememberme">Keep me logged in on this computer</jqx-check-box>
     </div>
     <div style="margin-top:10px;">
         <jqx-button theme="@ViewData["theme"]" on-click="validate()" id="loginButton" type="submit" value="Login"></jqx-button>
@@ -2521,15 +2609,18 @@ The ```jqx-validator``` tag helper adds a Validator Chart component to a web pag
 The ```jqx-window``` tag helper adds a Window Chart component to a web page.
 
 ```html
+<script src="~/jqwidgets/jqxwindow.js"></script>
+<script src="~/jqwidgets/jqxtabs.js"></script>
+
 @model IEnumerable<jQWidgets.AspNet.Core.Models.SalesEmployee>
+
 @{
     ViewData["Title"] = "ASP .NET MVC Window Example";
 }
-<label>ASP .NET Core MVC Window Example</label><br/><br/>
 <jqx-window theme="@ViewData["Theme"]" width="500" height="250">
     <jqx-window-header>Info</jqx-window-header>
     <jqx-window-body>
-        <jqx-tabs theme="@ViewData["Theme"]" width="100%" height="100%">
+        <jqx-tabs theme="@ViewData["Theme"]" style="margin:-1px;" width="100%" height="100%">
             <jqx-tab-panel>
                 <jqx-tab-panel-header style="margin-left:30px;">CISC</jqx-tab-panel-header>
                 <jqx-tab-panel-body>
@@ -2570,6 +2661,7 @@ The ```jqx-window``` tag helper adds a Window Chart component to a web page.
         </jqx-tabs>
     </jqx-window-body>
 </jqx-window>
+
 ```
 
 ```jqx-window-body``` tag helper defines the window's body. <br />
