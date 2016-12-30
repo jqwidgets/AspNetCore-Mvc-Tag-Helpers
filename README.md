@@ -903,15 +903,16 @@ The ```jqx-expander``` tag helper adds Expander component to a web page.
 </jqx-expander>
 ```
 jqx-expander-header tag helper defines the expander's header. jqx-expander-body tag helper defines the expander's body.
-FileUpload
+### FileUpload
 
 The jqx-file-upload tag helper adds a File Upload component to a web page.
+```html
 @{
     ViewData["Title"] = "ASP .NET MVC FileUpload Example";
 }
 <label>ASP .NET Core MVC File Upload Example</label><br/><br/>
-<jqx-file-upload width="300" multiple-files-upload="false" upload-url="@Url.Action("UploadFile", "TagHelpers")", fileInputName="fileToUpload" ></jqx-file-upload>
-
+<jqx-file-upload width="300" multiple-files-upload="false" upload-url="@Url.Action("UploadFile", "TagHelpers")", file-input-name="fileToUpload" ></jqx-file-upload>
+```
 ### Formatted Input
 
 The ```jqx-formatted-input``` tag helper adds a Formatted Input component to a web page.
