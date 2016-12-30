@@ -888,6 +888,7 @@ The ```jqx-editor``` tag helper adds Editor component to a web page.
 ### Expander
 
 The ```jqx-expander``` tag helper adds Expander component to a web page.
+```html
 @{
     ViewData["Title"] = "ASP .NET MVC Expander Example";
 }
@@ -900,6 +901,7 @@ The ```jqx-expander``` tag helper adds Expander component to a web page.
        <jqx-button style="margin:5px;" theme="@ViewData["Theme"]">Button 3</jqx-button>
    </jqx-expander-body>
 </jqx-expander>
+```
 jqx-expander-header tag helper defines the expander's header. jqx-expander-body tag helper defines the expander's body.
 FileUpload
 
