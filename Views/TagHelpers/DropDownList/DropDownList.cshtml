@@ -12,7 +12,7 @@
 @{
     var employee = Model.FirstOrDefault();
 }
-<jqx-dropdownlist for="@employee.Name" value-for="@employee.ID" selectedIndex="0" edit="@Url.Action("EditItem","TagHelpers")" create="@Url.Action("AddItem","TagHelpers")" delete="@Url.Action("DeleteItem","TagHelpers")" instance="listInstance()" theme="@ViewData["Theme"]" width="250" height="30" source="Model"></jqx-dropdownlist>
+<jqx-drop-down-list for="@employee.Name" value-for="@employee.ID" selected-index="0" edit="@Url.Action("EditItem","TagHelpers")" create="@Url.Action("AddItem","TagHelpers")" delete="@Url.Action("DeleteItem","TagHelpers")" instance="listInstance()" theme="@ViewData["Theme"]" width="250" height="30" source="Model"></jqx-drop-down-list>
 <div style="margin-top:30px;">
     <label>Add/Delete/Update</label>
     <table>

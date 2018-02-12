@@ -15,16 +15,62 @@
 <script src="~/jqwidgets/jqxscheduler.api.js"></script>
 <script src="~/jqwidgets/jqxnumberinput.js"></script>
 
-
 @model jQWidgets.AspNet.Core.Models.jQWidgetsDemosContext
 @using jQWidgets.AspNetCore.Mvc.TagHelpers;
 @{
     ViewData["Title"] = "ASP .NET MVC Scheduler Example";
 }
-<script>
+@section scripts {
+    <script type="text/javascript">
+    function contextMenuItemClick() {
 
-</script>
-<jqx-scheduler source="Model.Appointments" showLegend="true" view="WeekView" resources="Model.Resources" appointmentDataFields="Model.AppointmentDataFields" theme="@ViewData["Theme"]"  date="Model.Date" width="850" height="600">
+    }
+
+    function contextMenuOpen() {
+
+    }
+
+    function contextMenuClose() {
+
+    }
+
+    function contextMenuCreate() {
+
+    }
+
+    function editDialogOpen() {
+
+    }
+
+    function editDialogClose() {
+
+    }
+
+    function editDialogCreate() {
+
+    }
+
+    function editDialogKeyDown() {
+
+    }
+
+    function renderAppointment(data) {
+        data.style = "#447F6E";
+        return data;
+    }
+
+    function rendering() {
+
+
+    }
+
+    function rendered() {
+
+
+    }
+    </script>
+}
+<jqx-scheduler source="Model.Appointments" render-appointment="renderAppointment()" show-legend="true" view="WeekView" resources="Model.Resources" appointment-data-fields="Model.AppointmentDataFields" theme="@ViewData["Theme"]"  date="Model.Date" width="850" height="600">
     <jqx-scheduler-views>
         <jqx-scheduler-view type="DayView"></jqx-scheduler-view>
         <jqx-scheduler-view type="WeekView"></jqx-scheduler-view>

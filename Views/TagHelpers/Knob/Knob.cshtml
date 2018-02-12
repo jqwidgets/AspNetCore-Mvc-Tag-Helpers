@@ -34,5 +34,12 @@
         Offset = "60%",
         Background = new KnobStyle() { Fill = new KnobGradientFill() { Color = "gray" }, Stroke = "gray" }
     };
+    KnobDial dial = new KnobDial()
+    {
+        StartAngle = 120,
+        EndAngle = 420,
+        InnerRadius = "10%",
+        OuterRadius = "20%"
+    };
 }
-<jqx-knob min="0" max="100" value="60" startAngle="120" endAngle="420" rotation="clockwise"  progressBar="progressBar" labels="labels" style="style" marks="marks"></jqx-knob>
+<jqx-knob min="0" max="100" value="60" start-angle="120" end-angle="420" rotation="clockwise"  progress-bar="progressBar" labels="labels" style="style" marks="marks"></jqx-knob>

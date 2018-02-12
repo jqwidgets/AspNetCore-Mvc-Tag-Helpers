@@ -20,7 +20,7 @@
 @{
     var employee = Model.FirstOrDefault();
 }
-<jqx-grid id="grid" altrows="true" pageable="true" autoheight="true" editmode="selectedrow" sourceId-for="@employee.ID" instance="gridInstance()" theme="@ViewData["Theme"]" create="@Url.Action("Add","TagHelpers")" delete="@Url.Action("Delete","TagHelpers")" edit="@Url.Action("Edit","TagHelpers")" sortable="true" width="600" source="Model"> 
+<jqx-grid id="grid" alt-rows="true" pageable="true" auto-height="true" editmode="selectedrow" sourceId-for="@employee.ID" instance="gridInstance()" theme="@ViewData["Theme"]" create="@Url.Action("Add","TagHelpers")" delete="@Url.Action("Delete","TagHelpers")" edit="@Url.Action("Edit","TagHelpers")" sortable="true" width="600" source="Model"> 
     <jqx-grid-columns>
         <jqx-grid-column datafield-for="@(employee.ID)" width="25%" text="ID"></jqx-grid-column>
         <jqx-grid-column datafield-for="@(employee.FirstName)" width="25%" text="First Name"></jqx-grid-column>

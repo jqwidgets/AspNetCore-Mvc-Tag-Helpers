@@ -23,11 +23,11 @@
 @{
     var employee = Model.FirstOrDefault();
 }
-<jqx-grid id="grid" altrows="true" selectionmode="multiplecellsadvanced" editmode="selectedcell" editable="true" sourceId-for="@(employee.ID)"  theme="@ViewData["Theme"]" edit="@Url.Action("Edit","TagHelpers")" width="850" source="Model"> 
+<jqx-grid id="grid" alt-rows="true" selection-mode="multiplecellsadvanced" edit-mode="selectedcell" editable="true" source-id-for="@(employee.ID)"  theme="@ViewData["Theme"]" edit="@Url.Action("Edit","TagHelpers")" width="850" source="Model"> 
     <jqx-grid-columns>
         <jqx-grid-column datafield-for="@(employee.FirstName)" width="25%" text="First Name"></jqx-grid-column>
         <jqx-grid-column datafield-for="@(employee.LastName)" width="25%" text="Last Name"></jqx-grid-column>
         <jqx-grid-column datafield-for="@(employee.ProductName)" width="30%" text="Product Name"></jqx-grid-column>
-        <jqx-grid-column datafield-for="@(employee.Price)" width="20%" cellsformat="c2" cellsalign="HorizontalAlignment.Right" columntype="numberinput" text="Price"></jqx-grid-column>
+        <jqx-grid-column datafield-for="@(employee.Price)" width="20%" cells-format="c2" cells-align="HorizontalAlignment.Right" column-type="numberinput" text="Price"></jqx-grid-column>
   </jqx-grid-columns>
 </jqx-grid>

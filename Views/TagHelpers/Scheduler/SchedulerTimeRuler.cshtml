@@ -24,13 +24,13 @@
 <script>
     var timeZones = [{ id: "UTC", text: "UTC" }, { id: "Pacific Standard Time", text: "PST" }];
 </script>
-<jqx-scheduler source="Model.Appointments" showLegend="true" view="WeekView" resources="Model.Resources" appointmentDataFields="Model.AppointmentDataFields" theme="@ViewData["Theme"]"  date="Model.Date" width="850" height="600">
+<jqx-scheduler source="Model.Appointments" show-legend="true" view="WeekView" resources="Model.Resources" appointment-data-fields="Model.AppointmentDataFields" theme="@ViewData["Theme"]"  date="Model.Date" width="850" height="600">
     <jqx-scheduler-views>
         <jqx-scheduler-view type="DayView">
-            <jqx-scheduler-time-ruler timeZones="timeZones"></jqx-scheduler-time-ruler>
+            <jqx-scheduler-time-ruler time-zones="timeZones"></jqx-scheduler-time-ruler>
         </jqx-scheduler-view>
         <jqx-scheduler-view type="WeekView">
-            <jqx-scheduler-time-ruler timeZones="timeZones"></jqx-scheduler-time-ruler>
+            <jqx-scheduler-time-ruler time-zones="timeZones"></jqx-scheduler-time-ruler>
         </jqx-scheduler-view>
         <jqx-scheduler-view type="MonthView"></jqx-scheduler-view>
     </jqx-scheduler-views>

@@ -24,13 +24,13 @@
     var employee = Model.FirstOrDefault();
 }
 
-<jqx-grid id="grid" altrows="true" showstatusbar="true" showaggregates="true" filterable="true" pageable="true" autoheight="true" sourceId="ID" theme="@ViewData["Theme"]" sortable="true" width="850" source="Model">
+<jqx-grid id="grid" alt-rows="true" show-status-bar="true" show-aggregates="true" filterable="true" pageable="true" auto-height="true" source-id="ID" theme="@ViewData["Theme"]" sortable="true" width="850" source="Model">
     <jqx-grid-columns>
         <jqx-grid-column aggregates="['count']" datafield-for="@(employee.FirstName)" width="150" text="First Name"></jqx-grid-column>
         <jqx-grid-column aggregates="['count']" datafield-for="@(employee.LastName)" width="150" text="Last Name"></jqx-grid-column>
         <jqx-grid-column aggregates="['count']" datafield-for="@(employee.ProductName)" width="200" text="Product Name"></jqx-grid-column>
-        <jqx-grid-column aggregates="['sum']" datafield-for="@(employee.Price)" width="100" text="Price" cellsformat="c2" cellsalign="HorizontalAlignment.Right"></jqx-grid-column>
-        <jqx-grid-column aggregates="['sum']" datafield-for="@(employee.Quantity)" width="100" text="Quantity" cellsalign="HorizontalAlignment.Right"></jqx-grid-column>
-        <jqx-grid-column aggregates="['sum']" datafield-for="@(employee.Total)" width="150" text="Total" cellsformat="c2" cellsalign="HorizontalAlignment.Right"></jqx-grid-column>
+        <jqx-grid-column aggregates="['sum']" datafield-for="@(employee.Price)" width="100" text="Price" cells-format="c2" cells-align="HorizontalAlignment.Right"></jqx-grid-column>
+        <jqx-grid-column aggregates="['sum']" datafield-for="@(employee.Quantity)" width="100" text="Quantity" cells-align="HorizontalAlignment.Right"></jqx-grid-column>
+        <jqx-grid-column aggregates="['sum']" datafield-for="@(employee.Total)" width="150" text="Total" cells-format="c2" cells-align="HorizontalAlignment.Right"></jqx-grid-column>
  </jqx-grid-columns>
 </jqx-grid>

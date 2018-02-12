@@ -24,16 +24,16 @@
 }
 @section scripts {
     <script type="text/javascript">
-    function cellsRenderer(row, column, value) {
+    function cellsrenderer(row, column, value) {
         return "<div style='height: 100%; width: 100%; background: #ffaaaa;'><span style='margin-top: 6px; position: absolute; margin-left: 5px; color: #ffff00;'>" + value + "</span></div>";
     }
     </script>
 }
-<jqx-grid id="grid" altrows="true" pageable="true" autoheight="true" sourceId="ID" theme="@ViewData["Theme"]" sortable="true" width="600" source="Model">
+<jqx-grid id="grid" alt-rows="true" pageable="true" auto-height="true" sourceId="ID" theme="@ViewData["Theme"]" sortable="true" width="600" source="Model">
      <jqx-grid-columns>
         <jqx-grid-column datafield-for="@(employee.ID)" width="25%" text="ID"></jqx-grid-column>
         <jqx-grid-column datafield-for="@(employee.FirstName)" width="25%" text="First Name"></jqx-grid-column>
         <jqx-grid-column datafield-for="@(employee.LastName)" width="25%" text="Last Name"></jqx-grid-column>
-        <jqx-grid-column cellsrenderer=cellsRenderer() datafield-for="@(employee.ProductName)" width="25%" text="Product Name"></jqx-grid-column>
+        <jqx-grid-column cells-renderer=cellsrenderer() datafield-for="@(employee.ProductName)" width="25%" text="Product Name"></jqx-grid-column>
     </jqx-grid-columns>
 </jqx-grid>

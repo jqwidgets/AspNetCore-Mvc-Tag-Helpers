@@ -13,7 +13,6 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
     </environment>
-    @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
 
     <environment names="Development, Production">
         <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -123,6 +122,12 @@
         <script src="~/jqwidgets/jqxknob.js"></script>
         <script src="~/jqwidgets/jqxnotification.js"></script>
         <script src="~/jqwidgets/jqxpopover.js"></script>*@
+        <style>
+            .container {
+                margin: 0px;
+                margin-top: 30px;
+            }
+        </style>
 
     </environment>
 </head>
